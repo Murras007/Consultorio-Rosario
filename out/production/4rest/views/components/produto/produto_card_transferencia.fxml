@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="80.0" minHeight="80.0" prefHeight="80.0" prefWidth="435.0" spacing="10.0" styleClass="card" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="70.0" prefWidth="184.0">
+         <children>
+            <Label prefHeight="28.0" prefWidth="186.0" style="-fx-font-weight: bold;" text="NOME DO PRODUTO" />
+            <Label prefHeight="19.0" prefWidth="233.0" text="NOME DO PRODUTO" />
+         </children>
+      </VBox>
+      <TextField alignment="CENTER" prefHeight="53.0" prefWidth="86.0" promptText="QTD" style="-fx-background-color: light-gray;" />
+      <TextField alignment="CENTER" prefHeight="53.0" prefWidth="86.0" promptText="QTD" style="-fx-background-color: light-gray;" />
+      <TextField alignment="CENTER" prefHeight="53.0" prefWidth="86.0" promptText="QTD" style="-fx-background-color: light-gray;" />
+      <JFXButton contentDisplay="GRAPHIC_ONLY" maxHeight="45.0" maxWidth="50.0" minHeight="52.0" minWidth="52.0" prefHeight="45.0" prefWidth="50.0" ripplerFill="#3cdd82" styleClass="rounded-button" text="FECHAR">
+         <graphic>
+            <SVGPath content="M 10.5 3.699219 L 9.375 4.824219 L 12.804688 8.25 L 2.25 8.25 L 2.25 9.75 L 12.804688 9.75 L 9.375 13.179688 L 10.5 14.304688 L 15.804688 9 Z" style="-fx-fill: green;" />
+         </graphic>
+      </JFXButton>
+   </children>
+</HBox>

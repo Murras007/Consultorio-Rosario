@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.SVGPath?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="1267.0" style="-fx-background-color: white;" stylesheets="@../../../assets/css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.components.produto.ProdutoStockHistoricoController">
+   <children>
+      <GridPane layoutX="234.0" layoutY="74.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label styleClass="title" text="HISTÓRICO DE PRODUTO" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" maxHeight="45.0" maxWidth="50.0" minHeight="52.0" minWidth="52.0" onAction="#close" prefHeight="45.0" prefWidth="50.0" ripplerFill="#ae0b0b" text="FECHAR" GridPane.columnIndex="1">
+               <graphic>
+                  <SVGPath content="M 5.414063 4.335938 L 4.335938 5.414063 L 10.921875 12 L 4.335938 18.585938 L 5.414063 19.664063 L 12 13.078125 L 18.585938 19.664063 L 19.664063 18.585938 L 13.078125 12 L 19.664063 5.414063 L 18.585938 4.335938 L 12 10.921875 Z" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="rounded-button" />
+                  <String fx:value="close-popup-button" />
+               </styleClass>
+            </JFXButton>
+            <Label fx:id="produto_label" styleClass="sub-title" text="PRODUTO" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="datatablecontainer" layoutY="90.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,108 @@
+*{
+    -fx-primary-color: #188FC8;
+    -fx-danger-color: #F13B29;
+    -fx-secondary-color: #F08F1D;
+    -fx-white-color: #FFF;
+    -fx-dark-color: #131E26;
+    -fx-dark-gray-color: #514d4d;
+    -fx-light-gray-color: #a8a8a8;
+}
+
+.main-leftPane{
+    -fx-background-color: -fx-dark-color;
+    -fx-opacity: 0.8;
+}
+.title1{
+    -fx-text-fill: -fx-primary-color;
+}
+.text{
+    -fx-text-fill: -fx-light-gray-color;
+}
+SVGPath{
+    -fx-fill:  -fx-light-gray-color;
+}
+.main-screen{
+    -fx-background-image:url('../image/bg6.jpg');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+    -fx-background-align: center;
+}
+.logo{
+    -fx-image: url('../icon/logo-dark.png');
+}
+
+.text-box{
+    -fx-border-width: 1px;
+    -fx-border-color:  -fx-light-gray-color;
+    -fx-border-radius: 4px;
+}
+.text-no-background{
+    -fx-background-color: TRANSPARENT;
+}
+.header{
+    -fx-background-color:#fff;
+}
+.row-item-color{
+    -fx-text-fill:#7c7a7a;
+}
+.main-menuLeft{
+    -fx-background-color:#fff;
+}
+.main-menuButton{
+    -fx-background-color:#3F51B5;
+}
+
+.main-menuButton:hover{
+    -fx-background-color:#5062C6;
+}
+.root-transparent {
+    -fx-background-color: transparent;
+}
+
+.main-menuItem{
+    -fx-background-color:#fff;
+}
+
+.main-menuItem:hover{
+    -fx-background-color:#EAEAEA;
+}
+
+/* SCROLL*/
+.scroll-pane{
+    -fx-background-color: transparent;
+    -fx-border-color: derive(gray,100%);
+    -fx-padding: 0px;
+}
+.scroll-pane .scroll-bar:vertical{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.scroll-pane .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-border-radius: 2em;
+}
+.scroll-pane .scroll-bar:horizontal .decrement-button{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+
+.scroll-pane .scroll-bar:vertical .decrement-button{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0em;
+    -fx-padding: 0 0 10 0;
+}
+.scroll-pane .scroll-bar .increment-arrow,
+.scroll-pane .scroll-bar .decrement-arrow{
+
+    -fx-padding: -2;
+}
+
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: derive(black,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}

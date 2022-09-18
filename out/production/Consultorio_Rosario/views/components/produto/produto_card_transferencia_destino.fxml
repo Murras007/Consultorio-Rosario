@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<HBox alignment="CENTER_LEFT" maxHeight="80.0" minHeight="80.0" prefHeight="80.0" prefWidth="435.0" spacing="10.0" styleClass="card" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="CENTER" prefHeight="70.0" prefWidth="184.0">
+         <children>
+            <Label prefHeight="28.0" prefWidth="186.0" style="-fx-font-weight: bold;" text="NOME DO PRODUTO" />
+            <Label prefHeight="19.0" prefWidth="233.0" text="NOME DO PRODUTO" />
+         </children>
+      </VBox>
+      <TextField alignment="CENTER" prefHeight="53.0" prefWidth="86.0" promptText="QTD" style="-fx-background-color: light-gray;" />
+      <TextField alignment="CENTER" prefHeight="53.0" prefWidth="86.0" promptText="QTD" style="-fx-background-color: light-gray;" />
+      <TextField alignment="CENTER" prefHeight="53.0" prefWidth="86.0" promptText="QTD" style="-fx-background-color: light-gray;" />
+      <JFXButton contentDisplay="GRAPHIC_ONLY" maxHeight="45.0" maxWidth="50.0" minHeight="52.0" minWidth="52.0" prefHeight="45.0" prefWidth="50.0" ripplerFill="#ae0b0b" text="FECHAR">
+         <graphic>
+            <SVGPath content="M 5.414063 4.335938 L 4.335938 5.414063 L 10.921875 12 L 4.335938 18.585938 L 5.414063 19.664063 L 12 13.078125 L 18.585938 19.664063 L 19.664063 18.585938 L 13.078125 12 L 19.664063 5.414063 L 18.585938 4.335938 L 12 10.921875 Z" />
+         </graphic>
+         <styleClass>
+            <String fx:value="rounded-button" />
+            <String fx:value="close-popup-button" />
+         </styleClass>
+      </JFXButton>
+   </children>
+</HBox>

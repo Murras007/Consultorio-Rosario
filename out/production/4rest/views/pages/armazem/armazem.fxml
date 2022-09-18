@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<JFXTabPane style="-fx-background-color: rgba(255,255,255,.60);" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.pages.armazem.ArmazemController">
+   <tabs>
+      <Tab text="ARMAZÉNS">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" styleClass="title" text="ARMAZÉNS" />
+                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="637.0" layoutY="12.0" maxHeight="52.0" maxWidth="52.0" minHeight="52.0" minWidth="52.0" onAction="#adicionar" prefHeight="52.0" prefWidth="52.0" ripplerFill="#ae0b0b" styleClass="menu-button" text="Button" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="15.0">
+                     <graphic>
+                        <SVGPath content="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+                     </graphic>
+                  </JFXButton>
+                  <AnchorPane fx:id="dataTableContainer" layoutX="14.0" layoutY="81.0" prefHeight="86.0" prefWidth="326.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="81.0" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</JFXTabPane>

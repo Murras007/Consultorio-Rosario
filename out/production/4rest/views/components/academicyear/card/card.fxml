@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<AnchorPane prefHeight="126.0" prefWidth="277.0" styleClass="card" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+fx:controller="views.components.academicyear.card.CardController">
+   <children>
+      <SVGPath content="M 5 3 C 3.894531 3 3 3.894531 3 5 L 3 19 C 3 20.105469 3.894531 21 5 21 L 10.589844 21 C 10.332031 20.367188 10.15625 19.699219 10.066406 19 L 5 19 L 5 9 L 19 9 L 19 10.066406 C 19.699219 10.15625 20.367188 10.332031 21 10.589844 L 21 5 C 21 3.894531 20.105469 3 19 3 Z M 5 5 L 19 5 L 19 7 L 5 7 Z M 7 11 L 7 13 L 9 13 L 9 11 Z M 11 11 L 11 13 L 11.761719 13 C 12.410156 12.1875 13.214844 11.507813 14.128906 11 Z M 18 12 C 14.699219 12 12 14.699219 12 18 C 12 21.300781 14.699219 24 18 24 C 21.300781 24 24 21.300781 24 18 C 24 14.699219 21.300781 12 18 12 Z M 18 14 C 20.199219 14 22 15.800781 22 18 C 22 20.199219 20.199219 22 18 22 C 15.800781 22 14 20.199219 14 18 C 14 15.800781 15.800781 14 18 14 Z M 7 15 L 7 17 L 9 17 L 9 15 Z M 18.425781 15.117188 L 16.828125 18.140625 L 18.925781 20.234375 L 19.984375 19.175781 L 18.671875 17.859375 L 19.753906 15.816406 Z" layoutX="42.0" layoutY="44.0" scaleX="2.0" scaleY="2.0" />
+      <Label layoutX="98.0" layoutY="42.0" style="-fx-font-size: 20;" styleClass="title" text="ANO LECTIVO" />
+      <Label layoutX="98.0" layoutY="72.0" style="-fx-font-size: 20;" styleClass="sub-title" text="2022" />
+   </children>
+</AnchorPane>

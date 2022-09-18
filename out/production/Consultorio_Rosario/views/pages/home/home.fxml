@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="754.0" stylesheets="@../../../assets/css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.pages.home.HomeController">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="53.0" prefHeight="83.0" prefWidth="580.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="14.0" layoutY="45.0" prefHeight="22.0" prefWidth="162.0" text="As tuas ultimas informacoes" />
+            <Label fx:id="user_label" layoutX="14.0" layoutY="14.0" text="Ismael Correia">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <ScrollPane fitToHeight="true" layoutX="249.0" layoutY="102.0" prefHeight="150.0" prefWidth="734.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="102.0">
+         <content>
+            <HBox fx:id="armazem_list" prefHeight="150.0" prefWidth="527.0" spacing="20.0">
+               <children>
+                  <AnchorPane maxHeight="180.0" maxWidth="339.0" minHeight="100.0" minWidth="143.0" prefHeight="180.0" prefWidth="234.0" styleClass="card">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="14.0" style="-fx-background-color: primary; -fx-min-height: 60; -fx-min-width: 60; -fx-background-radius: 50%;">
+                           <graphic>
+                              <SVGPath content="M 18.558594 19.515625 C 18.472656 18.546875 18.507813 17.875 18.507813 16.988281 C 18.945313 16.761719 19.730469 15.296875 19.859375 14.058594 C 20.207031 14.03125 20.75 13.695313 20.910156 12.367188 C 20.992188 11.65625 20.652344 11.253906 20.445313 11.128906 C 21.003906 9.441406 22.167969 4.226563 18.292969 3.6875 C 17.890625 2.988281 16.871094 2.632813 15.542969 2.632813 C 10.230469 2.734375 9.589844 6.648438 10.753906 11.128906 C 10.546875 11.253906 10.207031 11.65625 10.292969 12.367188 C 10.453125 13.695313 10.996094 14.03125 11.339844 14.058594 C 11.46875 15.296875 12.285156 16.761719 12.726563 16.988281 C 12.726563 17.875 12.757813 18.546875 12.671875 19.515625 C 11.621094 22.34375 4.527344 21.546875 4.199219 27 L 27 27 C 26.671875 21.546875 19.609375 22.34375 18.558594 19.515625 Z" style="-fx-fill: white;" />
+                           </graphic>
+                        </Label>
+                        <Label layoutX="82.0" layoutY="20.0" prefHeight="49.0" prefWidth="132.0" style="-fx-text-fill: gray;" text="TOTAL DE PACIENTES" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="74.0" prefHeight="49.0" prefWidth="224.0" style="-fx-text-fill: gray;" text="40% Atendidos" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane maxHeight="180.0" maxWidth="339.0" minHeight="100.0" minWidth="143.0" prefHeight="180.0" prefWidth="234.0" styleClass="card">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="14.0" layoutY="14.0" style="-fx-background-color: primary; -fx-min-height: 60; -fx-min-width: 60; -fx-background-radius: 50%;">
+                           <graphic>
+                              <SVGPath content="M 18.558594 19.515625 C 18.472656 18.546875 18.507813 17.875 18.507813 16.988281 C 18.945313 16.761719 19.730469 15.296875 19.859375 14.058594 C 20.207031 14.03125 20.75 13.695313 20.910156 12.367188 C 20.992188 11.65625 20.652344 11.253906 20.445313 11.128906 C 21.003906 9.441406 22.167969 4.226563 18.292969 3.6875 C 17.890625 2.988281 16.871094 2.632813 15.542969 2.632813 C 10.230469 2.734375 9.589844 6.648438 10.753906 11.128906 C 10.546875 11.253906 10.207031 11.65625 10.292969 12.367188 C 10.453125 13.695313 10.996094 14.03125 11.339844 14.058594 C 11.46875 15.296875 12.285156 16.761719 12.726563 16.988281 C 12.726563 17.875 12.757813 18.546875 12.671875 19.515625 C 11.621094 22.34375 4.527344 21.546875 4.199219 27 L 27 27 C 26.671875 21.546875 19.609375 22.34375 18.558594 19.515625 Z" style="-fx-fill: white;" />
+                           </graphic>
+                        </Label>
+                        <Label layoutX="82.0" layoutY="20.0" prefHeight="49.0" prefWidth="132.0" style="-fx-text-fill: gray;" text="TOTAL DE PACIENTES" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="8.0" layoutY="74.0" prefHeight="49.0" prefWidth="224.0" style="-fx-text-fill: gray;" text="40% Atendidos" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <AnchorPane fx:id="table_view" layoutX="12.0" layoutY="258.0" prefHeight="260.0" prefWidth="384.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="258.0" />
+   </children>
+</AnchorPane>

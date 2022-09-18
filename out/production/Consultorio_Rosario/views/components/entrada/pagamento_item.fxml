@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<HBox prefHeight="93.0" prefWidth="264.0" style="-fx-background-color: white; -fx-background-radius: 10;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefHeight="82.0" prefWidth="236.0">
+         <children>
+            <Label text="MULTICAIXA">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label style="-fx-font-size: 12; -fx-text-fill: dark;" text="000432423">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+            <Label style="-fx-font-size: 12; -fx-font-weight: bold; -fx-text-fill: dark;" text="34.441,00 KZ">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" styleClass="rounded-button">
+               <graphic>
+                  <SVGPath content="M 13.8125 1.5 C 13.617188 1.5 13.425781 1.574219 13.28125 1.71875 L 2.25 12.75 L 2.25 15.75 L 5.25 15.75 L 16.28125 4.71875 C 16.574219 4.425781 16.574219 3.953125 16.28125 3.660156 L 14.339844 1.71875 C 14.195313 1.574219 14.003906 1.5 13.8125 1.5 Z M 13.8125 3.3125 L 14.691406 4.191406 L 13.71875 5.160156 L 12.839844 4.28125 Z M 11.78125 5.339844 L 12.660156 6.21875 L 4.628906 14.25 L 3.75 14.25 L 3.75 13.371094 Z" />
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" styleClass="rounded-button">
+               <graphic>
+                  <SVGPath content="M 7.5 1.5 L 6.75 2.25 L 3 2.25 L 3 3.75 L 3.75 3.75 L 3.75 15 C 3.75 15.820313 4.429688 16.5 5.25 16.5 L 12.75 16.5 C 13.570313 16.5 14.25 15.820313 14.25 15 L 14.25 3.75 L 15 3.75 L 15 2.25 L 11.25 2.25 L 10.5 1.5 Z M 5.25 3.75 L 12.75 3.75 L 12.75 15 L 5.25 15 Z" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
+</HBox>

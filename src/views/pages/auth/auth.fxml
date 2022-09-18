@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<AnchorPane prefHeight="733.0" prefWidth="490.0" style="-fx-background-radius: 10; -fx-background-color: white;" stylesheets="@../../../assets/css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.pages.auth.AuthController">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="41.0" layoutX="27.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="27.0">
+         <image>
+            <Image url="@../../../assets/images/logo1.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="86.0" layoutY="23.0" prefHeight="52.0" prefWidth="93.0" style="-fx-font-size: 13;" styleClass="title" text="CONSULTORIO ROSARIO" wrapText="true" AnchorPane.leftAnchor="86.0" />
+      <JFXTextField fx:id="txt_user" focusColor="#ff8214" layoutX="40.0" layoutY="347.0" prefHeight="40.0" prefWidth="399.0" promptText="Nome de utilizador" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+      <Label layoutX="40.0" layoutY="173.0" prefHeight="91.0" prefWidth="328.0" styleClass="title" text="LOGIN" AnchorPane.leftAnchor="40.0" />
+      <JFXPasswordField fx:id="txt_pwd" focusColor="#ff8214" layoutX="40.0" layoutY="429.0" prefHeight="40.0" prefWidth="399.0" promptText="Palavra-passe" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" />
+      <Label layoutX="40.0" layoutY="237.0" prefHeight="40.0" prefWidth="399.0" style="-fx-font-size: 12;" styleClass="sub-title" text="INFORME AS TUAS CREDENCIAIS PARA TER ACESSO AO SISTEMA" wrapText="true" AnchorPane.leftAnchor="40.0" />
+      <JFXButton buttonType="RAISED" contentDisplay="RIGHT" layoutX="152.0" layoutY="609.0" maxHeight="52.0" maxWidth="178.0" minHeight="52.0" minWidth="52.0" onAction="#login" prefHeight="52.0" prefWidth="148.0" ripplerFill="#34dd3a" styleClass="save-popup-button" text="ENTRAR" />
+      <JFXButton contentDisplay="TEXT_ONLY" layoutX="319.0" layoutY="609.0" maxHeight="52.0" maxWidth="131.0" minHeight="52.0" minWidth="52.0" onAction="#close" prefHeight="52.0" prefWidth="131.0" ripplerFill="#eb533c" styleClass="close-popup-button" text="SAIR" AnchorPane.rightAnchor="40.0">
+         <graphic>
+            <SVGPath content="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

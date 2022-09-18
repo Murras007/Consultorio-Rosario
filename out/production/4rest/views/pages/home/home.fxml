@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="754.0" stylesheets="@../../../assets/css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.pages.home.HomeController">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="53.0" prefHeight="83.0" prefWidth="580.0" styleClass="card" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" styleClass="title" text="Seja bem vindo ao" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0" />
+            <Label layoutX="306.0" layoutY="20.0" prefHeight="50.0" prefWidth="197.0" styleClass="sub-title" text="WINSTOCK" AnchorPane.leftAnchor="306.0" AnchorPane.topAnchor="5.0">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/images/logo.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <Label layoutX="18.0" layoutY="58.0" prefHeight="22.0" prefWidth="495.0" text="CUIDE DO SEU NEGÓCIO COM O MELHOR SISTEMA DE STOCK, SIMPLES E EFICAZ" />
+            <HBox alignment="CENTER_LEFT" layoutX="518.0" layoutY="9.0" prefHeight="80.0" prefWidth="293.0" spacing="10.0" style="-fx-background-color: light-gray; -fx-background-radius: 10;" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label fx:id="label_avatar" alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 50%; -fx-background-color: dark; -fx-border-width: 3; -fx-border-color: primary; -fx-border-radius: 50%; -fx-text-fill: primary;" text="IC" textAlignment="CENTER">
+                     <font>
+                        <Font name="Lato-Light" size="35.0" />
+                     </font>
+                  </Label>
+                  <VBox prefHeight="60.0" prefWidth="245.0">
+                     <children>
+                        <Label fx:id="user_label" text="Ismael Correia">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="user_tipo_label" style="-fx-text-fill: dark;" text="Administrador" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children></AnchorPane>
+      <ScrollPane fitToHeight="true" layoutX="249.0" layoutY="102.0" prefHeight="213.0" prefWidth="495.0" AnchorPane.leftAnchor="249.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="102.0">
+         <content>
+            <HBox fx:id="armazem_list" prefHeight="163.0" prefWidth="772.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="btn_add_armazem" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" maxHeight="212.0" maxWidth="163.0" minHeight="161.0" minWidth="143.0" prefHeight="161.0" prefWidth="143.0" ripplerFill="#30b5ff" styleClass="card">
+                     <graphic>
+                        <SVGPath content="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" scaleX="2.0" scaleY="2.0" />
+                     </graphic>
+                  </JFXButton>
+                  <AnchorPane maxHeight="212.0" maxWidth="163.0" minHeight="161.0" minWidth="143.0" prefHeight="161.0" prefWidth="143.0" styleClass="card-product">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="5.0" prefHeight="99.0" prefWidth="110.0" text="ARMAZEM DE VENDA DE PRODUTOS A GROSSO" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+                        <HBox alignment="CENTER" layoutX="1.0" layoutY="43.0" prefHeight="47.0" prefWidth="132.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                           <children>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" styleClass="rounded-button">
+                                 <graphic>
+                                    <SVGPath content="M 13.8125 1.5 C 13.617188 1.5 13.425781 1.574219 13.28125 1.71875 L 2.25 12.75 L 2.25 15.75 L 5.25 15.75 L 16.28125 4.71875 C 16.574219 4.425781 16.574219 3.953125 16.28125 3.660156 L 14.339844 1.71875 C 14.195313 1.574219 14.003906 1.5 13.8125 1.5 Z M 13.8125 3.3125 L 14.691406 4.191406 L 13.71875 5.160156 L 12.839844 4.28125 Z M 11.78125 5.339844 L 12.660156 6.21875 L 4.628906 14.25 L 3.75 14.25 L 3.75 13.371094 Z" />
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton contentDisplay="GRAPHIC_ONLY" styleClass="rounded-button">
+                                 <graphic>
+                                    <SVGPath content="M 7.5 1.5 L 6.75 2.25 L 3 2.25 L 3 3.75 L 3.75 3.75 L 3.75 15 C 3.75 15.820313 4.429688 16.5 5.25 16.5 L 12.75 16.5 C 13.570313 16.5 14.25 15.820313 14.25 15 L 14.25 3.75 L 15 3.75 L 15 2.25 L 11.25 2.25 L 10.5 1.5 Z M 5.25 3.75 L 12.75 3.75 L 12.75 15 L 5.25 15 Z" />
+                                 </graphic>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </content>
+      </ScrollPane>
+      <AnchorPane layoutX="10.0" layoutY="112.0" prefHeight="178.0" prefWidth="226.0" styleClass="card" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="112.0">
+         <children>
+            <PieChart fx:id="circular_chart" layoutX="8.0" layoutY="14.0" prefHeight="150.0" prefWidth="110.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

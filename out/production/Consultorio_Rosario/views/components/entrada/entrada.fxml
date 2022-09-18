@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="543.0" prefWidth="855.0" style="-fx-background-color: white;" stylesheets="@../../../assets/css/style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.components.entrada.EntradaController">
+   <children>
+      <GridPane layoutX="234.0" layoutY="74.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="NEVER" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label styleClass="title" text="ENTRADA DE PRODUTOS" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" maxHeight="45.0" maxWidth="50.0" minHeight="52.0" minWidth="52.0" onAction="#close" prefHeight="45.0" prefWidth="50.0" ripplerFill="#ae0b0b" text="FECHAR" GridPane.columnIndex="1">
+               <graphic>
+                  <SVGPath content="M 5.414063 4.335938 L 4.335938 5.414063 L 10.921875 12 L 4.335938 18.585938 L 5.414063 19.664063 L 12 13.078125 L 18.585938 19.664063 L 19.664063 18.585938 L 13.078125 12 L 19.664063 5.414063 L 18.585938 4.335938 L 12 10.921875 Z" />
+               </graphic>
+               <styleClass>
+                  <String fx:value="rounded-button" />
+                  <String fx:value="close-popup-button" />
+               </styleClass>
+            </JFXButton>
+         </children>
+      </GridPane>
+      <JFXTabPane fx:id="tab_pane_entrada" layoutX="16.0" layoutY="79.0" prefHeight="377.0" prefWidth="651.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="79.0">
+         <tabs>
+            <Tab text="ESPECIFICAÇÕES DO PRODUTO">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane hgap="20.0" layoutX="17.0" layoutY="22.0" prefHeight="303.0" prefWidth="664.0" vgap="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <JFXComboBox fx:id="cmb_produto" focusColor="#ff8214" prefHeight="36.0" prefWidth="382.0" promptText="PRODUTO" GridPane.columnIndex="1" />
+                              <JFXTextField fx:id="txt_fabricante" focusColor="#ff8214" prefHeight="40.0" prefWidth="290.0" promptText="FABRICANTE" GridPane.rowIndex="2" />
+                              <JFXDatePicker fx:id="data_validade" minHeight="40.0" prefHeight="40.0" prefWidth="384.0" promptText="DATA DE VALIDADE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <JFXTextField fx:id="txt_custo_compra" focusColor="#ff8214" onKeyReleased="#calc" prefHeight="40.0" prefWidth="290.0" promptText="CUSTO DE COMPRA" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <JFXTextField fx:id="txt_qtd" focusColor="#ff8214" prefHeight="40.0" prefWidth="290.0" promptText="QUANTIDADE" GridPane.rowIndex="3" />
+                              <VBox prefHeight="38.0" prefWidth="192.0" visible="false" GridPane.rowIndex="4">
+                                 <children>
+                                    <Label prefHeight="36.0" prefWidth="110.0" style="-fx-text-fill: dark;" text="MARGEM DE LUCRO" />
+                                    <JFXSlider fx:id="sld_margem" onDragOver="#calc" onMouseDragReleased="#calc" onMousePressed="#calc" onMouseReleased="#calc" onScroll="#calc" prefHeight="14.0" prefWidth="290.0" />
+                                 </children>
+                              </VBox>
+                              <JFXTextField fx:id="txt_preco_venda" focusColor="#ff8214" prefHeight="40.0" prefWidth="290.0" promptText="PREÇO DE VENDA" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXTextField fx:id="txt_referencia" focusColor="#ff8214" prefHeight="36.0" prefWidth="402.0" promptText="REFERÊNCIA" />
+                                 </children>
+                              </HBox>
+                              <JFXComboBox fx:id="cmb_armazem" focusColor="#ff8214" prefHeight="36.0" prefWidth="382.0" promptText="ARMAZÉM DE DESTINO" />
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <JFXTextField fx:id="txt_num_lote" focusColor="#ff8214" prefHeight="40.0" prefWidth="280.0" promptText="Nº LOTE" />
+                                    <JFXCheckBox fx:id="check_referencia_auto" onAction="#generateLoteNumber" text="AUTOMÁTICO" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <JFXButton contentDisplay="TEXT_ONLY" layoutX="428.0" layoutY="353.0" maxHeight="52.0" maxWidth="290.0" minHeight="35.0" minWidth="52.0" onAction="#addItem" prefHeight="52.0" prefWidth="183.0" ripplerFill="#35c0db" styleClass="save-popup-button" text="+ ADICIONAR">
+                           <graphic>
+                              <SVGPath content="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+                           </graphic>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_finalizar" contentDisplay="TEXT_ONLY" layoutX="487.0" layoutY="353.0" maxHeight="52.0" maxWidth="290.0" minHeight="35.0" minWidth="52.0" onAction="#finalTab" prefHeight="52.0" prefWidth="183.0" ripplerFill="#35c0db" styleClass="save-popup-button" text="FINALIZAR" AnchorPane.rightAnchor="40.0">
+                           <graphic>
+                              <SVGPath content="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="itens_tab_title" text="ITENS ADICIONADOS">
+              <content>
+                <AnchorPane fx:id="itens_container" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="tab_finalizar" onSelectionChanged="#finalTab" text="FINALIZAR">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane layoutX="5.0" layoutY="103.0" prefHeight="304.0" prefWidth="563.0" style="-fx-background-color: light-gray; -fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="103.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="44.0" prefHeight="188.0" prefWidth="226.0" spacing="10.0" style="-fx-background-radius: 10; -fx-background-color: white;" AnchorPane.leftAnchor="10.0">
+                                 <children>
+                                    <JFXComboBox fx:id="cmb_forma_pagamento" focusColor="#ff8214" prefHeight="41.0" prefWidth="238.0" promptText="FORMA DE PAGAMENTO" />
+                                    <JFXTextField fx:id="txt_referencia_pagamento" focusColor="#ff8214" prefHeight="40.0" prefWidth="217.0" promptText="REFERÊNCIA" />
+                                    <JFXTextField fx:id="txt_valor_pagamento" focusColor="#ff8214" prefHeight="40.0" prefWidth="217.0" promptText="VALOR" />
+                                    <JFXButton contentDisplay="TEXT_ONLY" maxHeight="52.0" maxWidth="290.0" minHeight="35.0" minWidth="52.0" onAction="#addPagamento" prefHeight="52.0" prefWidth="183.0" ripplerFill="#35c0db" styleClass="save-popup-button" text="+ ADICIONAR">
+                                       <graphic>
+                                          <SVGPath content="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                              <Label layoutX="22.0" layoutY="14.0" text="PAGAMENTOS" AnchorPane.leftAnchor="22.0">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <ScrollPane fitToWidth="true" layoutX="256.0" layoutY="51.0" prefHeight="187.0" prefWidth="302.0">
+                                 <content>
+                                    <VBox fx:id="vb_pagamento" prefHeight="185.0" prefWidth="302.0" spacing="10.0">
+                                       <children>
+                                          <HBox prefHeight="93.0" prefWidth="264.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+                                             <children>
+                                                <VBox prefHeight="82.0" prefWidth="236.0">
+                                                   <children>
+                                                      <Label text="MULTICAIXA">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label style="-fx-font-size: 12; -fx-text-fill: dark;" text="000432423">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label style="-fx-font-size: 12; -fx-font-weight: bold; -fx-text-fill: dark;" text="34.441,00 KZ">
+                                                         <font>
+                                                            <Font size="19.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </padding>
+                                                </VBox>
+                                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                                   <children>
+                                                      <JFXButton contentDisplay="GRAPHIC_ONLY" styleClass="rounded-button">
+                                                         <graphic>
+                                                            <SVGPath content="M 13.8125 1.5 C 13.617188 1.5 13.425781 1.574219 13.28125 1.71875 L 2.25 12.75 L 2.25 15.75 L 5.25 15.75 L 16.28125 4.71875 C 16.574219 4.425781 16.574219 3.953125 16.28125 3.660156 L 14.339844 1.71875 C 14.195313 1.574219 14.003906 1.5 13.8125 1.5 Z M 13.8125 3.3125 L 14.691406 4.191406 L 13.71875 5.160156 L 12.839844 4.28125 Z M 11.78125 5.339844 L 12.660156 6.21875 L 4.628906 14.25 L 3.75 14.25 L 3.75 13.371094 Z" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <JFXButton contentDisplay="GRAPHIC_ONLY" styleClass="rounded-button">
+                                                         <graphic>
+                                                            <SVGPath content="M 7.5 1.5 L 6.75 2.25 L 3 2.25 L 3 3.75 L 3.75 3.75 L 3.75 15 C 3.75 15.820313 4.429688 16.5 5.25 16.5 L 12.75 16.5 C 13.570313 16.5 14.25 15.820313 14.25 15 L 14.25 3.75 L 15 3.75 L 15 2.25 L 11.25 2.25 L 10.5 1.5 Z M 5.25 3.75 L 12.75 3.75 L 12.75 15 L 5.25 15 Z" />
+                                                         </graphic>
+                                                      </JFXButton>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </children>
+                        </AnchorPane>
+                        <HBox alignment="CENTER" layoutX="11.0" layoutY="53.0" prefHeight="47.0" prefWidth="132.0" spacing="10.0" />
+                        <Label layoutX="578.0" layoutY="17.0" text="SUMÁRIO">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="578.0" layoutY="51.0" prefHeight="3.0" prefWidth="273.0" />
+                        <GridPane layoutX="578.0" layoutY="64.0" prefHeight="91.0" prefWidth="274.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.0" minWidth="10.0" prefWidth="107.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="176.0" minWidth="10.0" prefWidth="167.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="28.0" minHeight="20.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="20.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="50.0" minHeight="20.0" prefHeight="24.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label fx:id="lbl_subtotal" style="-fx-font-size: 12; -fx-font-weight: bold; -fx-text-fill: dark;" text="00" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label style="-fx-font-size: 16; -fx-text-fill: dark;" text="Total de Itens">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label style="-fx-font-size: 16; -fx-text-fill: dark;" text="Total" visible="false" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl_total" style="-fx-font-size: 12; -fx-font-weight: bold; -fx-text-fill: dark;" text="0,00 KZ" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label style="-fx-font-size: 16; -fx-text-fill: dark;" text="Pago" visible="false" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lbl_pago" style="-fx-font-size: 12; -fx-font-weight: bold; -fx-text-fill: dark;" text="0,00 KZ" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <JFXButton buttonType="RAISED" contentDisplay="TEXT_ONLY" layoutX="623.0" layoutY="336.0" maxHeight="52.0" maxWidth="290.0" minHeight="35.0" minWidth="52.0" onAction="#save" prefHeight="52.0" prefWidth="183.0" ripplerFill="#35c0db" style="-fx-background-color: #35c0db; -fx-text-fill: white;" styleClass="save-popup-button" text="FINALIZAR">
+                           <graphic>
+                              <SVGPath content="M 11 2 L 11 11 L 2 11 L 2 13 L 11 13 L 11 22 L 13 22 L 13 13 L 22 13 L 22 11 L 13 11 L 13 2 Z" />
+                           </graphic>
+                        </JFXButton>
+                        <VBox layoutX="11.0" layoutY="17.0" prefHeight="363.0" prefWidth="321.0" spacing="10.0" styleClass="card">
+                           <children>
+                              <Label prefHeight="47.0" prefWidth="189.0" style="-fx-text-fill: primary; -fx-font-weight: bold; -fx-font-size: 15;" text="CABEÇALHO DA ENTRADA" />
+                              <JFXComboBox fx:id="cmb_fornecedor" focusColor="#ff8214" prefHeight="37.0" prefWidth="383.0" promptText="FORNECEDOR" />
+                              <JFXComboBox fx:id="cmb_forma_entrada" focusColor="#ff8214" prefHeight="37.0" prefWidth="339.0" promptText="FORMA DE ENTRADA" />
+                              <JFXTextField fx:id="txt_n_fatura" focusColor="#ff8214" prefHeight="40.0" prefWidth="229.0" promptText="Nº FATURA / Nº ENCOMENDA" />
+                              <JFXDatePicker fx:id="data_entrada" minHeight="40.0" prefHeight="40.0" prefWidth="361.0" promptText="DATA DE ENTRADA" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>
